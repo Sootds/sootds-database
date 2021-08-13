@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS vendors__stores;
+DROP TABLE IF EXISTS stores__followers;
+DROP TABLE IF EXISTS stores;
+DROP TABLE IF EXISTS vendors;
 DROP TABLE IF EXISTS sign_in_counter;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS addresses;
+DROP TABLE IF EXISTS roles;
