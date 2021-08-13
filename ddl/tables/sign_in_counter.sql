@@ -1,0 +1,10 @@
+CREATE TABLE sign_in_counter (
+  id SERIAL,
+  user_id INTEGER NOT NULL,
+  count INTEGER DEFAULT 0 NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  PRIMARY KEY (id, user_id),
+  CONSTRAINT fk_user_id
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);

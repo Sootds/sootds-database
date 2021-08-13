@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS sign_in_counter;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS addresses;

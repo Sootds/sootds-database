@@ -1,0 +1,11 @@
+CREATE TABLE users (
+  id SERIAL UNIQUE,
+  username VARCHAR (50) UNIQUE NOT NULL,
+  birthdate DATE NOT NULL,
+  address_id INTEGER NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  PRIMARY KEY (id, username),
+  CONSTRAINT fk_address_id
+  FOREIGN KEY (address_id) REFERENCES addresses(id)
+);
