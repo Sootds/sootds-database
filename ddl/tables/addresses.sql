@@ -1,12 +1,14 @@
 CREATE TABLE addresses (
   id SERIAL UNIQUE,
   name VARCHAR(100) NOT NULL,
+  country_id INTEGER NOT NULL,
   city VARCHAR(50) NOT NULL,
-  country VARCHAR(50) NOT NULL,
-  postal_code VARCHAR(20) NOT NULL,
+  state VARCHAR(50) NOT NULL,
+  code VARCHAR(20) NOT NULL,
   geolocation POINT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   deleted BOOLEAN DEFAULT FALSE NOT NULL,
-  PRIMARY KEY (id)
-)
+  PRIMARY KEY (id),
+  CONSTRAINT fk_country_id FOREIGN KEY (country_id) REFERENCES countries(id)
+);
