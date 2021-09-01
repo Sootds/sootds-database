@@ -80,7 +80,7 @@ CREATE TABLE stores (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   deleted BOOLEAN DEFAULT FALSE NOT NULL,
   PRIMARY KEY (id),
-  CONSTRAINT fk_created_by FOREIGN KEY (created_by) REFERENCES users(id)
+  CONSTRAINT fk_created_by FOREIGN KEY (created_by) REFERENCES vendors(id)
 );
 
 CREATE TABLE stores__followers (
