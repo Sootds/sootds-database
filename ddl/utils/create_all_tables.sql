@@ -18,6 +18,10 @@ CREATE TABLE countries (
   deleted BOOLEAN DEFAULT FALSE NOT NULL
 );
 
+-- Insert `Canada` and `U.S.A.`.
+INSERT INTO countries (name) VALUES ('Canada');
+INSERT INTO countries (name) VALUES ('U.S.A.');
+
 CREATE TABLE addresses (
   id SERIAL UNIQUE,
   name VARCHAR(100) NOT NULL,
